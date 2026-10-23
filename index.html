@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -165,8 +165,7 @@ document.querySelectorAll("img[data-cp]").forEach(i=>i.src=document.querySelecto
 const D=document.documentElement;
 function setL(l){D.lang=l;D.dir=l==="ar"?"rtl":"ltr";document.querySelectorAll("[data-t]").forEach(e=>e.textContent=T[l][e.dataset.t]);
 document.getElementById("lang").setAttribute("aria-label",l==="ar"?"English":"العربية");try{localStorage.setItem("zk-lang",l)}catch(e){}}
-let s0="ar";try{const v=localStorage.getItem("zk-lang");if(v==="en"||v==="ar")s0=v}catch(e){}
-setL(s0);
+setL("en");
 document.getElementById("lang").onclick=()=>setL(D.lang==="ar"?"en":"ar");
 const lk=document.getElementById("lk");document.getElementById("bg").onclick=()=>lk.classList.toggle("o");
 lk.querySelectorAll("a").forEach(a=>a.onclick=()=>lk.classList.remove("o"));
